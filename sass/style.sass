@@ -1,0 +1,47 @@
+@import "compass"
+
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+body
+  background-color: #9cb8b3
+  
+h1
+  font-family: 'Montserrat', sans-serif
+  font-size: 3.8rem
+  text-align: center
+  text-transform: uppercase
+  text-shadow: -4px -4px 0px #fcfade
+  background: repeating-linear-gradient(45deg, #6EB495, #000 1px, white 2px, white 3px)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  &:hover
+    
+
+svg
+  cursor: pointer
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: -60px
+  margin-left: -90px
+  *
+    @include transition(all 0.3s)
+  #f2, #f1
+    animation: part 0.15s infinite
+  &:hover
+    #Oval-4, #Oval-5
+      @include rotateX(30deg)
+    #f2, #f1
+      animation: part 0.05s infinite
+
++keyframes (part)
+  50%
+    opacity: 0

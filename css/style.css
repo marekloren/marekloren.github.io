@@ -1,0 +1,56 @@
+body {
+  background-color: #9cb8b3;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -4px -4px 0px #fcfade;
+  background: repeating-linear-gradient(45deg, #6EB495, #000 1px, white 2px, white 3px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+svg {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -90px;
+}
+svg * {
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+svg #f2, svg #f1 {
+  animation: part 0.15s infinite;
+}
+svg:hover #Oval-4, svg:hover #Oval-5 {
+  -moz-transform: rotateX(30deg);
+  -webkit-transform: rotateX(30deg);
+  transform: rotateX(30deg);
+}
+svg:hover #f2, svg:hover #f1 {
+  animation: part 0.05s infinite;
+}
+
+@-webkit-keyframes part {
+  50% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes part {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes part {
+  50% {
+    opacity: 0;
+  }
+}
